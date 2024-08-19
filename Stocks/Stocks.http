@@ -1,0 +1,10 @@
+@host = http://localhost
+@port = 5045
+@Stocks_HostAddress = {{host}}:{{port}}
+GET {{Stocks_HostAddress}}/api/weatherforecast/
+Accept: application/json
+Guid: {{$guid}}
+LocalDate: {{$datetime iso8601}}
+Random-int: {{$randomInt}}
+
+###
