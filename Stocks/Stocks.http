@@ -1,10 +1,24 @@
 @host = http://localhost
 @port = 5045
 @Stocks_HostAddress = {{host}}:{{port}}
-GET {{Stocks_HostAddress}}/api/weatherforecast/
+GET {{Stocks_HostAddress}}/api/weatherforecast/23/example?max=15
 Accept: application/json
 Guid: {{$guid}}
 LocalDate: {{$datetime iso8601}}
 Random-int: {{$randomInt}}
 
 ###
+
+GET {{Stocks_HostAddress}}/api/weatherforecast/currentDay
+Accept: application/json
+Guid: {{$guid}}
+LocalDate: {{$datetime iso8601}}
+Random-int: {{$randomInt}}
+
+###
+
+POST {{Stocks_HostAddress}}/api/weatherforecast
+Content-Type: application/json
+
+"Gujarathi"
+
